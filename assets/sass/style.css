@@ -7134,177 +7134,102 @@ Working Two
     line-height: 28px;
   }
 }
-
 /*==========================================================================
-Price
+Hall of Dreads
 ==========================================================================*/
-.price__area-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.hall__area-item {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: var(--box-shadow-4);
-          box-shadow: var(--box-shadow-4);
-  padding: 20px 40px 20px 20px;
-}
-
-.price__area-item-image {
-  margin-right: 30px;
-}
-
-.price__area-item-image img {
-  max-width: 120px;
-}
-
-.price__area-item-content h4 span {
-  color: var(--primary-color);
-  float: right;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--box-shadow-4);
+  padding: 10px;
+  background: var(--white);
+  overflow: hidden;
   position: relative;
-  padding-left: 120px;
-}
-
-.price__area-item-content h4 span::before {
-  position: absolute;
-  content: '';
-  left: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 80px;
-  height: 1px;
-  border: 1px dashed var(--primary-color);
-}
-
-.price__area-item-content p {
-  margin-bottom: 0;
-}
-
-/*==========================================================================
-Price Two
-==========================================================================*/
-.price__two {
-  background: var(--heading-color);
-  position: relative;
-  z-index: 1;
-}
-
-.price__two-title h2 {
-  color: var(--white);
-}
-
-.price__two-title .subtitle__two {
-  color: var(--white);
-}
-
-.price__two-item {
-  background: var(--border-color-5);
-  border: 1px solid var(--border-color-3);
-  -webkit-transition: all 0.4s ease-out 0s;
-  transition: all 0.4s ease-out 0s;
-  padding: 50px 40px;
-}
-
-.price__two-item-content h4 {
-  color: var(--white);
-}
-
-.price__two-item-content p {
-  color: var(--color-3);
-}
-
-.price__two-item-content h2 {
-  color: var(--white);
+  border-radius: 10px;
   margin-bottom: 30px;
 }
 
-.price__two-item-content h2 span {
-  color: var(--color-3);
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: 400;
-  font-family: var(--body-font);
+.hall__area-item-image img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
 }
 
-.price__two-item-btn .theme-border-btn {
-  color: var(--white);
+.hall__area-item:hover img {
+  transform: scale(1.1);
 }
 
-.price__two-item-btn .theme-border-btn::after {
-  background: var(--primary-color);
+.hall__area {
+  padding: 60px 0;
 }
 
-.price__two-item-btn .theme-border-btn:hover {
-  border-color: var(--primary-color);
+.hall__area-title h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
 }
 
-.price__two-item-list ul {
+.hall__area-title-menu ul {
   padding: 0;
   margin: 0;
-}
-
-.price__two-item-list ul li {
   list-style: none;
-  color: var(--color-3);
-  margin-bottom: 12px;
 }
 
-.price__two-item-list ul li:last-child {
-  margin: 0;
-}
-
-.price__two-item-list ul li i {
-  color: var(--white);
-  width: 20px;
-  height: 20px;
+.hall__area-title-menu ul li {
   display: inline-block;
-  line-height: 20px;
-  background: var(--color-12);
-  text-align: center;
-  border-radius: 50%;
-  font-size: 12px;
   margin-right: 10px;
+  color: var(--text-color);
 }
 
-.price__two-item:hover {
+.hall__area-title-menu ul li a {
+  color: var(--text-color);
+}
+
+.hall__area-title-menu ul li span {
+  color: var(--primary-color);
+}
+
+/*==========================================================================
+Pagination
+==========================================================================*/
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.pagination a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid var(--border-color);
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.pagination a:hover,
+.pagination a.active {
+  background: var(--primary-color);
+  color: var(--white);
   border-color: var(--primary-color);
 }
 
 @media (max-width: 1199px) {
-  .price__area-item {
-    padding: 20px;
-  }
-  .price__area-item-image {
-    margin-right: 20px;
-  }
-  .price__area-item-content h4 span {
-    padding-left: 65px;
-  }
-  .price__area-item-content h4 span::before {
-    width: 45px;
-  }
-  .price__two-item {
-    padding: 40px 30px;
+  .hall__area-item {
+    padding: 15px;
   }
 }
 
 @media (max-width: 480px) {
-  .price__area-item {
+  .hall__area-item {
     display: block;
+    padding: 10px;
   }
-  .price__area-item-image {
-    margin: 0;
-    margin-bottom: 30px;
-  }
-  .price__area-item-image img {
+  .hall__area-item-image img {
     max-width: 100%;
-  }
-  .price__area-item-content h4 span {
-    padding-left: 55px;
-  }
-  .price__area-item-content h4 span::before {
-    width: 40px;
   }
 }
 

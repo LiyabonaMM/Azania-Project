@@ -229,3 +229,82 @@
 		return false;
 	});
 })(jQuery);
+
+document.addEventListener('DOMContentLoaded', function () {
+    const itemsPerPage = 9; // Adjust the number of items per page
+    const gallery = document.getElementById('hall-of-dreads-gallery');
+    const pagination = document.querySelector('.pagination');
+    const clientImages = [
+        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
+        'https://i.imghippo.com/files/Mhbzd1721913175.jpg',
+        'https://i.imghippo.com/files/p9IOr1721914962.jpg',
+        'https://i.imghippo.com/files/Xg5Xj1721915041.jpg',
+        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
+        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
+        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
+        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
+        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
+        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
+        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
+        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
+        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
+        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
+        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
+        // Add more client image URLs here
+    ];
+    let currentPage = 1;
+
+    function displayGallery(page) {
+        gallery.innerHTML = '';
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        const pageItems = clientImages.slice(start, end);
+
+        pageItems.forEach(imageUrl => {
+            const item = document.createElement('div');
+            item.className = 'col-xl-4 col-lg-4 col-md-6 mb-30';
+            item.innerHTML = `
+                <div class="hall__area-item">
+                    <div class="hall__area-item-image">
+                        <img src="${imageUrl}" alt="Client Name">
+                    </div>
+                </div>
+            `;
+            gallery.appendChild(item);
+        });
+
+        updatePagination(page);
+    }
+
+    function updatePagination(page) {
+        pagination.innerHTML = '';
+        const totalPages = Math.ceil(clientImages.length / itemsPerPage);
+
+        const createPageLink = (pageNumber, text) => {
+            const link = document.createElement('a');
+            link.href = '#';
+            link.className = pageNumber === page ? 'page-number active' : 'page-number';
+            link.textContent = text;
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                currentPage = pageNumber;
+                displayGallery(currentPage);
+            });
+            return link;
+        };
+
+        if (page > 1) {
+            pagination.appendChild(createPageLink(page - 1, 'Prev'));
+        }
+
+        for (let i = 1; i <= totalPages; i++) {
+            pagination.appendChild(createPageLink(i, i));
+        }
+
+        if (page < totalPages) {
+            pagination.appendChild(createPageLink(page + 1, 'Next'));
+        }
+    }
+
+    displayGallery(currentPage);
+});
