@@ -235,21 +235,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const gallery = document.getElementById('hall-of-dreads-gallery');
     const pagination = document.querySelector('.pagination');
     const clientImages = [
-        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
+        'https://i.imghippo.com/files/5RklK1721916684.jpg',
         'https://i.imghippo.com/files/Mhbzd1721913175.jpg',
         'https://i.imghippo.com/files/p9IOr1721914962.jpg',
         'https://i.imghippo.com/files/Xg5Xj1721915041.jpg',
+        'https://i.imghippo.com/files/ul2Lr1721915226.jpg',
+        'https://i.imghippo.com/files/tyUez1721915298.jpg',
+        'https://i.imghippo.com/files/ejQtT1721916160.jpg',
+        'https://i.imghippo.com/files/wAiB81721916432.jpg',
+        'https://i.imghippo.com/files/6Sjz41721916487.jpg',
+        'https://i.imghippo.com/files/jXkUK1721916603.jpg',
         'https://i.imghippo.com/files/DWDRR1721913991.jpg',
-        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
-        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
-        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
-        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
-        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
-        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
-        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
-        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
-        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
-        'https://i.imghippo.com/files/DWDRR1721913991.jpg',
+        'https://i.imghippo.com/files/vVoPk1721916781.jpg',
+        'https://i.imghippo.com/files/IgVCJ1721916877.jpg',
+        'https://i.imghippo.com/files/geFh21721916915.jpg',
+        'https://i.imghippo.com/files/3WYHw1721916987.jpg',
         // Add more client image URLs here
     ];
     let currentPage = 1;
