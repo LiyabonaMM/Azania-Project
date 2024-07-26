@@ -7113,7 +7113,7 @@ Hall of Dreads
 }
 
 .hall__area-title h2 {
-  color: var(--primary-color);
+  color: var(--heading-color);
   margin-bottom: 20px;
 }
 
@@ -7134,7 +7134,7 @@ Hall of Dreads
 }
 
 .hall__area-title-menu ul li span {
-  color: var(--primary-color);
+  color: var(--heading-color);
 }
 
 /*==========================================================================
